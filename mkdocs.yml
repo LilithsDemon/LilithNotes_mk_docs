@@ -1,0 +1,16 @@
+site_name: Lilith Notes
+theme: 
+  name: material
+  nav_style: dark
+  palette:
+    scheme: slate
+    primary: pink
+    accent: purple
+
+plugins:
+  - search
+  - include_dir_to_nav
+
+nav:
+  - Home: 'index.md'
+  - Year 1: Year1
