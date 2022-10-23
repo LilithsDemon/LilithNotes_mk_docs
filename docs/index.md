@@ -1,4 +1,4 @@
-# Welcome to Lilih notes
+# Welcome to Lilith notes
 
 ---
 

@@ -1,3 +1,5 @@
+# Data Transmission
+
 ## Factors that effect data transmission
 
 ### Electrical signals
