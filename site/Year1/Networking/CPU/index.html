@@ -404,6 +404,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bus-in-cpu" class="md-nav__link">
+    Bus in CPU
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -581,6 +588,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bus-in-cpu" class="md-nav__link">
+    Bus in CPU
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -624,7 +638,7 @@
 </ul>
 <hr />
 <h3 id="registers">Registers</h3>
-<p>Registers are small amounts of high-speed memory contained within the CPU. They are used by the processor to store small amounts of data that are needed during procesing, such as:</p>
+<p>Registers are small amounts of high-speed memory contained within the CPU. They are used by the processor to store small amounts of data that are needed during processing, such as:</p>
 <ul>
 <li>The address of the next instruction to be executed</li>
 <li>The current instruction being decoded</li>
@@ -641,13 +655,13 @@
 <hr />
 <h2 id="cpu-speed">CPU speed</h2>
 <h3 id="clock-speed">Clock Speed</h3>
-<p>A 'CPU clock cycle' is a synchronised pulse thorugh the computer.
-During each cycle/pulse, billions of transistors withing the processor will open and close. Somtimes, multiple instructions can be completed each clock cycle however at the same time sometimes an instruction can take multiple clock cycles.</p>
+<p>A 'CPU clock cycle' is a synchronised pulse through the computer.
+During each cycle/pulse, billions of transistors withing the processor will open and close. Sometimes, multiple instructions can be completed each clock cycle however at the same time sometimes an instruction can take multiple clock cycles.</p>
 <p>In general, a higher clock speed means a faster CPU. The clock speed measures the number of cycles your CPU executes per second, measured in GHz</p>
 <p><img alt="153f8549da09d9b4f904e02c0455cbee.png" src="../../../_resources/153f8549da09d9b4f904e02c0455cbee.png" /></p>
 <h3 id="cache">Cache</h3>
-<p>Cache is a small amount of <strong><em>R</em></strong>andom <strong><em>A</em></strong>ccess <strong><em>M</em></strong>emory (<strong><em>RAM</em></strong>) that is built directly within the processor. 
-As it is built directly into the processor this means that it is faster to access and therefore the data/instructions can be read and used more efficently.
+<p>Cache is a small amount of <strong><em>R</em></strong>andom <strong><em>A</em></strong>ccess <strong><em>M</em></strong>emory (<strong><em>RAM</em></strong>) that is built directly within the processor.
+As it is built directly into the processor this means that it is faster to access and therefore the data/instructions can be read and used more efficiently.
 As there is only a small amount it is used to hold data/instructions that are more likely to be used.
 This allows for faster processing as the processor does not need to wait for the data/instructions to be fetched from RAM.</p>
 <p>There are different levels of cache in a CPU:</p>
@@ -658,23 +672,41 @@ This allows for faster processing as the processor does not need to wait for the
 <li>Also named primary cache</li>
 <li>Is the fastest and is embedded in the Processor chip as CPU cache</li>
 <li>Has the least amount of storage</li>
-</ul>
-</li>
 <li>
 <p>Level 2:</p>
-<ul>
-<li>Also names secondary cache</li>
-<li>Can be embedded in the CPU or as a co-processor or a seperate chip</li>
-<li>Has a high-speed bus connecting the cahce and CPU so it does not get slowed down by traffic on the main system</li>
-</ul>
 </li>
 <li>
+<p>Also names secondary cache</p>
+</li>
+<li>Can be embedded in the CPU or as a co-processor or a seperate chip</li>
+<li>Has a high-speed bus connecting the cahce and CPU so it does not get slowed down by traffic on the main system</li>
+<li>
 <p>Level 3:</p>
+</li>
+<li>
+<p>Specialised memory to improve the performance of L1 and L2 cache</p>
+</li>
+<li>Usually double the speed of DRAM</li>
+<li>With multi-core processors, each core can have dedicated L1 and L2 cache, but can share L3 cache</li>
+<li>If a L3 cache references an instruction, it is usually elevated to a higher level of cache</li>
+</ul>
+</li>
+</ul>
+<h2 id="bus-in-cpu">Bus in CPU</h2>
+<p>A bus is a high-speed connection to all internal and external components that consists of a network of wires.</p>
+<p>Buses are used to send control signals and data between the processor and other components.</p>
+<p>There are 3 types of buses:</p>
 <ul>
-<li>Specalised memory to improve the performance of L1 and L2 cache</li>
-<li>Ussually double the speed of DRAM</li>
-<li>With multi-core processors, each core can have dedicated L1 and L2 cache, but can share L3 cache </li>
-<li>If a L3 cache refernces an instruction, it is ussually elevated to a higher level of cache</li>
+<li>Address Bus<ul>
+<li>Carries memory addresses from the processor to other components such as primary memory and input/output devices</li>
+</ul>
+</li>
+<li>Data Bus<ul>
+<li>Carries the actual data between the processor and other components</li>
+</ul>
+</li>
+<li>Control Bus<ul>
+<li>Carries control signals from the processor to other components. The control bus also carries the clock's pulses.</li>
 </ul>
 </li>
 </ul>

@@ -37,7 +37,7 @@ The CU controls the operation of the processor.
 
 ### Registers
 
-Registers are small amounts of high-speed memory contained within the CPU. They are used by the processor to store small amounts of data that are needed during procesing, such as:
+Registers are small amounts of high-speed memory contained within the CPU. They are used by the processor to store small amounts of data that are needed during processing, such as:
 
 - The address of the next instruction to be executed
 - The current instruction being decoded
@@ -58,8 +58,8 @@ Some examples of Registers are
 
 ### Clock Speed
 
-A 'CPU clock cycle' is a synchronised pulse thorugh the computer.
-During each cycle/pulse, billions of transistors withing the processor will open and close. Somtimes, multiple instructions can be completed each clock cycle however at the same time sometimes an instruction can take multiple clock cycles.
+A 'CPU clock cycle' is a synchronised pulse through the computer.
+During each cycle/pulse, billions of transistors withing the processor will open and close. Sometimes, multiple instructions can be completed each clock cycle however at the same time sometimes an instruction can take multiple clock cycles.
 
 In general, a higher clock speed means a faster CPU. The clock speed measures the number of cycles your CPU executes per second, measured in GHz
 
@@ -67,25 +67,41 @@ In general, a higher clock speed means a faster CPU. The clock speed measures th
 
 ### Cache
 
-Cache is a small amount of ***R***andom ***A***ccess ***M***emory (***RAM***) that is built directly within the processor. 
-As it is built directly into the processor this means that it is faster to access and therefore the data/instructions can be read and used more efficently.
+Cache is a small amount of ***R***andom ***A***ccess ***M***emory (***RAM***) that is built directly within the processor.
+As it is built directly into the processor this means that it is faster to access and therefore the data/instructions can be read and used more efficiently.
 As there is only a small amount it is used to hold data/instructions that are more likely to be used.
 This allows for faster processing as the processor does not need to wait for the data/instructions to be fetched from RAM.
 
 There are different levels of cache in a CPU:
 
 - Level 1:
-	- Also named primary cache
-	- Is the fastest and is embedded in the Processor chip as CPU cache
-	- Has the least amount of storage
-
+    
+    - Also named primary cache
+    - Is the fastest and is embedded in the Processor chip as CPU cache
+    - Has the least amount of storage
 - Level 2:
-	- Also names secondary cache
-	- Can be embedded in the CPU or as a co-processor or a seperate chip
-	- Has a high-speed bus connecting the cahce and CPU so it does not get slowed down by traffic on the main system
-
+    
+    - Also names secondary cache
+    - Can be embedded in the CPU or as a co-processor or a seperate chip
+    - Has a high-speed bus connecting the cahce and CPU so it does not get slowed down by traffic on the main system
 - Level 3:
-	- Specalised memory to improve the performance of L1 and L2 cache
-	- Ussually double the speed of DRAM
-	- With multi-core processors, each core can have dedicated L1 and L2 cache, but can share L3 cache 
-	- If a L3 cache refernces an instruction, it is ussually elevated to a higher level of cache
+    
+    - Specialised memory to improve the performance of L1 and L2 cache
+    - Usually double the speed of DRAM
+    - With multi-core processors, each core can have dedicated L1 and L2 cache, but can share L3 cache
+    - If a L3 cache references an instruction, it is usually elevated to a higher level of cache
+
+## Bus in CPU
+
+A bus is a high-speed connection to all internal and external components that consists of a network of wires.
+
+Buses are used to send control signals and data between the processor and other components.
+
+There are 3 types of buses:
+
+- Address Bus
+    - Carries memory addresses from the processor to other components such as primary memory and input/output devices
+- Data Bus
+    - Carries the actual data between the processor and other components
+- Control Bus
+    - Carries control signals from the processor to other components. The control bus also carries the clock's pulses.
