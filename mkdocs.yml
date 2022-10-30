@@ -7,6 +7,17 @@ theme:
     primary: pink
     accent: purple
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LilithsDemon
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/lucy__gardener
+    - icon: fontawesome/brands/discord
+      link: https://github.com/LilithsDemon
+
+copyright: Copyright &copy; 2022 Lucy Gardener
+
 plugins:
   - search
   - include_dir_to_nav
