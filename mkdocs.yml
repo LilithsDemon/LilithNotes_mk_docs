@@ -6,6 +6,8 @@ theme:
     scheme: slate
     primary: pink
     accent: purple
+  features:
+    - navigation.tabs
 
 extra:
   social:
@@ -21,7 +23,19 @@ copyright: Copyright &copy; 2022 Lucy Gardener
 plugins:
   - search
   - include_dir_to_nav
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - blog
 
 nav:
-  - Home: 'index.md'
-  - Year 1: Year1
+  - Notes: 
+    - Home: 'index.md'
+    - Year1
+  - Blog: 
+    -  blog/index.md
+      

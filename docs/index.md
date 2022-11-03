@@ -1,7 +1,11 @@
-# Welcome to Lilith notes
+## Welcome to Lilith Notes
 
----
+***
+Made By LilithsDemon(Lucy Gardener)
+***
 
-Here you can find all the notes I have made for UNI
 
-[Link to my website for other resources:](https://lilith.remote.ac) 
+Lilith Notes is a website that is going to be a source of different resources from note takings to a blog.
+
+
+[Link to my website for other resources:](https://lilith.remote.ac)
