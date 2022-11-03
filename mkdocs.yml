@@ -31,6 +31,8 @@ plugins:
         - categories
         - tags
   - blog
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -45,4 +47,6 @@ nav:
     - Year1
   - Blog: 
     -  blog/index.md
-      
+
+repo_url: https://github.com/LilithsDemon/lilithnotes.github.io
+repo_name: LilithsDemon/Lilith-Notes
