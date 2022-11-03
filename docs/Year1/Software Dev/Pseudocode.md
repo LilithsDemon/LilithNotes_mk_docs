@@ -35,13 +35,13 @@ To output you would use OUTPUT such as:
 For If statements as said earlier we have to use ENDIF at the end and use caps
 For example
 
-```
+``` py linenums="1"
 IF Age >= 10 THEN
-        SET status to "Child"
+	SET status to "Child"
 ELSE IF Age == 20 THEN
-        SET status to "Adult"
+	SET status to "Adult"
 ELSE THEN
-        SET status to "unsure"
+	SET status to "unsure"
 ENDIF	
 ```
 
@@ -49,13 +49,13 @@ ENDIF
 
 Switch work similar to standard c++ but written a little nicer and can be used in one statement For example
 
-```
+``` py linenums="1"
 CASE OF Answer
-        'A': OUTPUT "Wrong"
-        'B': OUTPUT "Correct"
-        'C': OUTPUT "Wrong"
-        'D': OUTPUT "Wrong"
-        OTHER: OUTPUT "Invalid Option"
+    'A': OUTPUT "Wrong"
+    'B': OUTPUT "Correct"
+    'C': OUTPUT "Wrong"
+    'D': OUTPUT "Wrong"
+    OTHER: OUTPUT "Invalid Option"
 ENDCASE
 ```
 
@@ -64,20 +64,20 @@ ENDCASE
 There are many forms of iteration through pseudocode
 These are examples are here:
 
-```
+``` py linenums="1"
 /* Do Statement */
 DO
-        Age = Age + 1
+    Age = Age + 1
 UNTIL Age >= 15
 
 /* DO WHILE statement */
 DO WHILE Age <= 15
-        Age = Age + 1
+    Age = Age + 1
 END WHILE
 
 /* FOR loop */
 FOR A IN 1 To 5
-        OUTPUT A
+    OUTPUT A
 END FOR
 ```
 
@@ -87,7 +87,7 @@ When using functions and procedures it could be useful to include the main, this
 
 To show what the main part of a program is we would use:
 
-```
+``` py linenums="1"
 PROGRAM START (MAIN)
     INPUT Number1
     OUTPUT Number1
@@ -100,18 +100,18 @@ If you are giving parameters to a function or procedure you must first include "
 
 For example:
 
-```
+``` py linenums="1"
 PROCEDURE outputNums(PASS VARIABLES num1, num2, num3)
-        OUTPUT "First Number: " + num1
-        OUTPUT "Second Number: " + num2
-        OUTPUT "SUM: " + num3
+    OUTPUT "First Number: " + num1
+    OUTPUT "Second Number: " + num2
+    OUTPUT "SUM: " + num3
 ENDPROCEDURE
 ```
 
-```
+``` py linenums="1"
 FUNCTION sumNums(PASS VARIABLES num1, num2)
-        varNums = num1 + num2
-        RETURN varNUMS
+    varNums = num1 + num2
+    RETURN varNUMS
 ENDFUNCTION
 ```
 
@@ -124,7 +124,7 @@ An For this pseudocode we should:
 - Output the number
 
 This would look like this:
-```
+``` py linenums="1"
 OUTPUT "Enter number 1"
 INPUT first number AS varNum1
 OUTPUT "Enter number 2"
@@ -139,7 +139,7 @@ In this example we should:
 - Output to tell the user if their value is not a 5 or a 6
 
 This would look like:
-```
+``` py linenums="1"
 OUTPUT "Enter a number: "
 INPUT number AS varNumber
 IF varNumber is NOT equal to 5 OR varNumber is NOT equal to 6
@@ -159,17 +159,17 @@ This code example will:
     - If there is another number
         - Write that it is not a correct colour option
 
-```
+``` py linenums="1"
 OUTPUT "Please enter a number: "
 INPUT number AS varNumber
 IF varNumber >= 0 AND varNumber < 10
-        SET varOutput AS "Blue"
+    SET varOutput AS "Blue"
 ELSE IF varNumber >= 10 AND varNumber < 20
-        SET varOutput AS "Red"
+    SET varOutput AS "Red"
 ELSE IF varNumber >= than 20 AND <= 30
-        SET varOutput AS "Green"
+    SET varOutput AS "Green"
 ELSE
-        SET varOutput AS "That is not a correct colour option"
+    SET varOutput AS "That is not a correct colour option"
 ENDIF
         
 OUTPUT varOutput
@@ -178,12 +178,12 @@ OUTPUT varOutput
 ### Multiples of 5 between 1 and 100
 So for this example we will make pseudocode that will print all multiples of 5 between 1 and 100 (including both 1 and 100) *** using MOD ***
 
-```
+``` py linenums="1"
 SET varNum AS 1
 DO
     varNum is equal to varNum + 1
     IF varNum MOD 5 is equal to 0
-            OUPTUT varNum
+        OUPTUT varNum
     ENDIF
 UNTIL varNum is equal to 101
 
@@ -200,22 +200,23 @@ However using MOD this is 1 of the many ways you can do this
 In this example we will count all even numbers up to a user defined stopping point
 The code should use either a function or procedure to gather the user input, and to count and output all the even numbers
 
-```
+``` py linenums="1"
 FUNCTION getNumber()
-        OUTPUT "Please enter a stopping point: "
-        INPUT number AS varStopPoint
-        RETURN number
+    OUTPUT "Please enter a stopping point: "
+    INPUT number AS varStopPoint
+    RETURN number
 ENDFUNCTION
 
 PROCEDURE outputEvenNumbers()
-        FOR i IN 2 to varStopPoint
-                IF i MOD 2 == 0
-                        OUTPUT i
-                ENDIF
+    FOR i IN 2 to varStopPoint
+            IF i MOD 2 == 0
+                    OUTPUT i
+            ENDIF
+    ENDFOR
 ENDPROCEDURE
 
 PROGRAM START (MAIN)
-        SET varStopPoint AS CALL getNumber()
-        CALL outputEvenNumbers(varStopPoint)
+    SET varStopPoint AS CALL getNumber()
+    CALL outputEvenNumbers(varStopPoint)
 ENDPROGRAM
 ```

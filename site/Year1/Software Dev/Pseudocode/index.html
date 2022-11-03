@@ -870,89 +870,133 @@ To output you would use OUTPUT such as:
 <h4 id="if-statements">If statements</h4>
 <p>For If statements as said earlier we have to use ENDIF at the end and use caps
 For example</p>
-<pre><code>IF Age &gt;= 10 THEN
-        SET status to &quot;Child&quot;
-ELSE IF Age == 20 THEN
-        SET status to &quot;Adult&quot;
-ELSE THEN
-        SET status to &quot;unsure&quot;
-ENDIF   
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">IF</span> <span class="n">Age</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="n">THEN</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">SET</span> <span class="n">status</span> <span class="n">to</span> <span class="s2">&quot;Child&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">ELSE</span> <span class="n">IF</span> <span class="n">Age</span> <span class="o">==</span> <span class="mi">20</span> <span class="n">THEN</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">SET</span> <span class="n">status</span> <span class="n">to</span> <span class="s2">&quot;Adult&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">ELSE</span> <span class="n">THEN</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">SET</span> <span class="n">status</span> <span class="n">to</span> <span class="s2">&quot;unsure&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">ENDIF</span>   
+</code></pre></div></td></tr></table></div>
 <h4 id="switch-case">Switch Case</h4>
 <p>Switch work similar to standard c++ but written a little nicer and can be used in one statement For example</p>
-<pre><code>CASE OF Answer
-        'A': OUTPUT &quot;Wrong&quot;
-        'B': OUTPUT &quot;Correct&quot;
-        'C': OUTPUT &quot;Wrong&quot;
-        'D': OUTPUT &quot;Wrong&quot;
-        OTHER: OUTPUT &quot;Invalid Option&quot;
-ENDCASE
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">CASE</span> <span class="n">OF</span> <span class="n">Answer</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">OUTPUT</span> <span class="s2">&quot;Wrong&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">OUTPUT</span> <span class="s2">&quot;Correct&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="n">OUTPUT</span> <span class="s2">&quot;Wrong&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="n">OUTPUT</span> <span class="s2">&quot;Wrong&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">OTHER</span><span class="p">:</span> <span class="n">OUTPUT</span> <span class="s2">&quot;Invalid Option&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">ENDCASE</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="iteration-statements">Iteration Statements</h3>
 <p>There are many forms of iteration through pseudocode
 These are examples are here:</p>
-<pre><code>/* Do Statement */
-DO
-        Age = Age + 1
-UNTIL Age &gt;= 15
-
-/* DO WHILE statement */
-DO WHILE Age &lt;= 15
-        Age = Age + 1
-END WHILE
-
-/* FOR loop */
-FOR A IN 1 To 5
-        OUTPUT A
-END FOR
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">/*</span> <span class="n">Do</span> <span class="n">Statement</span> <span class="o">*/</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">DO</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">Age</span> <span class="o">=</span> <span class="n">Age</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">UNTIL</span> <span class="n">Age</span> <span class="o">&gt;=</span> <span class="mi">15</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="o">/*</span> <span class="n">DO</span> <span class="n">WHILE</span> <span class="n">statement</span> <span class="o">*/</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">DO</span> <span class="n">WHILE</span> <span class="n">Age</span> <span class="o">&lt;=</span> <span class="mi">15</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="n">Age</span> <span class="o">=</span> <span class="n">Age</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">END</span> <span class="n">WHILE</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="o">/*</span> <span class="n">FOR</span> <span class="n">loop</span> <span class="o">*/</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">FOR</span> <span class="n">A</span> <span class="n">IN</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">5</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>    <span class="n">OUTPUT</span> <span class="n">A</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">END</span> <span class="n">FOR</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="functions-and-procedures">Functions and Procedures</h3>
 <p>When using functions and procedures it could be useful to include the main, this is the bit of a program that is ran when the code starts, it should be after all the functions and procedures it relies on as it cannot call funtions and procedures after it as they would not have been compiled or interpreted.</p>
 <p>To show what the main part of a program is we would use:</p>
-<pre><code>PROGRAM START (MAIN)
-    INPUT Number1
-    OUTPUT Number1
-END PROGRAM
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">PROGRAM</span> <span class="n">START</span> <span class="p">(</span><span class="n">MAIN</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">INPUT</span> <span class="n">Number1</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">OUTPUT</span> <span class="n">Number1</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">END</span> <span class="n">PROGRAM</span>
+</code></pre></div></td></tr></table></div>
 <p>And then for functions and procedures we will just use FUNCTION and PROCUDURE and then the END versions of them.</p>
 <p>If you are giving parameters to a function or procedure you must first include "PASS VARIABLES" before the paramters to show that they are being passed.</p>
 <p>For example:</p>
-<pre><code>PROCEDURE outputNums(PASS VARIABLES num1, num2, num3)
-        OUTPUT &quot;First Number: &quot; + num1
-        OUTPUT &quot;Second Number: &quot; + num2
-        OUTPUT &quot;SUM: &quot; + num3
-ENDPROCEDURE
-</code></pre>
-<pre><code>FUNCTION sumNums(PASS VARIABLES num1, num2)
-        varNums = num1 + num2
-        RETURN varNUMS
-ENDFUNCTION
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">PROCEDURE</span> <span class="n">outputNums</span><span class="p">(</span><span class="n">PASS</span> <span class="n">VARIABLES</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">OUTPUT</span> <span class="s2">&quot;First Number: &quot;</span> <span class="o">+</span> <span class="n">num1</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">OUTPUT</span> <span class="s2">&quot;Second Number: &quot;</span> <span class="o">+</span> <span class="n">num2</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="n">OUTPUT</span> <span class="s2">&quot;SUM: &quot;</span> <span class="o">+</span> <span class="n">num3</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">ENDPROCEDURE</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">FUNCTION</span> <span class="n">sumNums</span><span class="p">(</span><span class="n">PASS</span> <span class="n">VARIABLES</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">varNums</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="n">RETURN</span> <span class="n">varNUMS</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">ENDFUNCTION</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="examples-of-code">Examples of code</h2>
 <h3 id="multiplication-of-2-numbers-example">Multiplication of 2 numbers Example</h3>
 <p>An For this pseudocode we should:
 - Input 2 numbers
 - Mulitply the 2 numbers together
 - Output the number</p>
-<p>This would look like this:</p>
-<pre><code>OUTPUT &quot;Enter number 1&quot;
-INPUT first number AS varNum1
-OUTPUT &quot;Enter number 2&quot;
-INPUT second number AS varNum2
-
-OUPUT varNum1 multiplied by varNum2
-</code></pre>
+<p>This would look like this:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">OUTPUT</span> <span class="s2">&quot;Enter number 1&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">INPUT</span> <span class="n">first</span> <span class="n">number</span> <span class="n">AS</span> <span class="n">varNum1</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">OUTPUT</span> <span class="s2">&quot;Enter number 2&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">INPUT</span> <span class="n">second</span> <span class="n">number</span> <span class="n">AS</span> <span class="n">varNum2</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">OUPUT</span> <span class="n">varNum1</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="n">varNum2</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="check-if-input-is-a-specific-value">Check if input is a specific value</h3>
 <p>In this example we should:
 - Takes a users number input
 - Output to tell the user if their value is not a 5 or a 6</p>
-<p>This would look like:</p>
-<pre><code>OUTPUT &quot;Enter a number: &quot;
-INPUT number AS varNumber
-IF varNumber is NOT equal to 5 OR varNumber is NOT equal to 6
-    OUTPUT &quot;That number is not a 5 or a 6&quot;
-ENDIF
-</code></pre>
+<p>This would look like:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">OUTPUT</span> <span class="s2">&quot;Enter a number: &quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">INPUT</span> <span class="n">number</span> <span class="n">AS</span> <span class="n">varNumber</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">IF</span> <span class="n">varNumber</span> <span class="ow">is</span> <span class="n">NOT</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">5</span> <span class="n">OR</span> <span class="n">varNumber</span> <span class="ow">is</span> <span class="n">NOT</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">6</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">OUTPUT</span> <span class="s2">&quot;That number is not a 5 or a 6&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">ENDIF</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="colour-selecter">Colour selecter</h3>
 <p>This code example will:
 - Ask a user to enter a number
@@ -964,58 +1008,101 @@ ENDIF
         - Write the word Green
     - If there is another number
         - Write that it is not a correct colour option</p>
-<pre><code>OUTPUT &quot;Please enter a number: &quot;
-INPUT number AS varNumber
-IF varNumber &gt;= 0 AND varNumber &lt; 10
-        SET varOutput AS &quot;Blue&quot;
-ELSE IF varNumber &gt;= 10 AND varNumber &lt; 20
-        SET varOutput AS &quot;Red&quot;
-ELSE IF varNumber &gt;= than 20 AND &lt;= 30
-        SET varOutput AS &quot;Green&quot;
-ELSE
-        SET varOutput AS &quot;That is not a correct colour option&quot;
-ENDIF
-
-OUTPUT varOutput
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">OUTPUT</span> <span class="s2">&quot;Please enter a number: &quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">INPUT</span> <span class="n">number</span> <span class="n">AS</span> <span class="n">varNumber</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">IF</span> <span class="n">varNumber</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="n">AND</span> <span class="n">varNumber</span> <span class="o">&lt;</span> <span class="mi">10</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="n">SET</span> <span class="n">varOutput</span> <span class="n">AS</span> <span class="s2">&quot;Blue&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">ELSE</span> <span class="n">IF</span> <span class="n">varNumber</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="n">AND</span> <span class="n">varNumber</span> <span class="o">&lt;</span> <span class="mi">20</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="n">SET</span> <span class="n">varOutput</span> <span class="n">AS</span> <span class="s2">&quot;Red&quot;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">ELSE</span> <span class="n">IF</span> <span class="n">varNumber</span> <span class="o">&gt;=</span> <span class="n">than</span> <span class="mi">20</span> <span class="n">AND</span> <span class="o">&lt;=</span> <span class="mi">30</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="n">SET</span> <span class="n">varOutput</span> <span class="n">AS</span> <span class="s2">&quot;Green&quot;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">ELSE</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="n">SET</span> <span class="n">varOutput</span> <span class="n">AS</span> <span class="s2">&quot;That is not a correct colour option&quot;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="n">ENDIF</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">OUTPUT</span> <span class="n">varOutput</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="multiples-of-5-between-1-and-100">Multiples of 5 between 1 and 100</h3>
 <p>So for this example we will make pseudocode that will print all multiples of 5 between 1 and 100 (including both 1 and 100) <strong><em> using MOD </em></strong></p>
-<pre><code>SET varNum AS 1
-DO
-    varNum is equal to varNum + 1
-    IF varNum MOD 5 is equal to 0
-            OUPTUT varNum
-    ENDIF
-UNTIL varNum is equal to 101
-
-/*
-Note --&gt;
-There are multiple ways to do this for example with a While or a for loop
-Or if you did not have to use MOD you could just keep adding up in 5s
-However using MOD this is 1 of the many ways you can do this
-*/
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">SET</span> <span class="n">varNum</span> <span class="n">AS</span> <span class="mi">1</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">DO</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">varNum</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="n">varNum</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">IF</span> <span class="n">varNum</span> <span class="n">MOD</span> <span class="mi">5</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">0</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="n">OUPTUT</span> <span class="n">varNum</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="n">ENDIF</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">UNTIL</span> <span class="n">varNum</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">101</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="o">/*</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="n">Note</span> <span class="o">--&gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="n">There</span> <span class="n">are</span> <span class="n">multiple</span> <span class="n">ways</span> <span class="n">to</span> <span class="n">do</span> <span class="n">this</span> <span class="k">for</span> <span class="n">example</span> <span class="k">with</span> <span class="n">a</span> <span class="n">While</span> <span class="ow">or</span> <span class="n">a</span> <span class="k">for</span> <span class="n">loop</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="n">Or</span> <span class="k">if</span> <span class="n">you</span> <span class="n">did</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">to</span> <span class="n">use</span> <span class="n">MOD</span> <span class="n">you</span> <span class="n">could</span> <span class="n">just</span> <span class="n">keep</span> <span class="n">adding</span> <span class="n">up</span> <span class="ow">in</span> <span class="mi">5</span><span class="n">s</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="n">However</span> <span class="n">using</span> <span class="n">MOD</span> <span class="n">this</span> <span class="ow">is</span> <span class="mi">1</span> <span class="n">of</span> <span class="n">the</span> <span class="n">many</span> <span class="n">ways</span> <span class="n">you</span> <span class="n">can</span> <span class="n">do</span> <span class="n">this</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="o">*/</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="count-multiples-of-2">Count multiples of 2</h3>
 <p>In this example we will count all even numbers up to a user defined stopping point
 The code should use either a function or procedure to gather the user input, and to count and output all the even numbers</p>
-<pre><code>FUNCTION getNumber()
-        OUTPUT &quot;Please enter a stopping point: &quot;
-        INPUT number AS varStopPoint
-        RETURN number
-ENDFUNCTION
-
-PROCEDURE outputEvenNumbers()
-        FOR i IN 2 to varStopPoint
-                IF i MOD 2 == 0
-                        OUTPUT i
-                ENDIF
-ENDPROCEDURE
-
-PROGRAM START (MAIN)
-        SET varStopPoint AS CALL getNumber()
-        CALL outputEvenNumbers(varStopPoint)
-ENDPROGRAM
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">FUNCTION</span> <span class="n">getNumber</span><span class="p">()</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="n">OUTPUT</span> <span class="s2">&quot;Please enter a stopping point: &quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="n">INPUT</span> <span class="n">number</span> <span class="n">AS</span> <span class="n">varStopPoint</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="n">RETURN</span> <span class="n">number</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">ENDFUNCTION</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="n">PROCEDURE</span> <span class="n">outputEvenNumbers</span><span class="p">()</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    <span class="n">FOR</span> <span class="n">i</span> <span class="n">IN</span> <span class="mi">2</span> <span class="n">to</span> <span class="n">varStopPoint</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>            <span class="n">IF</span> <span class="n">i</span> <span class="n">MOD</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>                    <span class="n">OUTPUT</span> <span class="n">i</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>            <span class="n">ENDIF</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="n">ENDFOR</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="n">ENDPROCEDURE</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="n">PROGRAM</span> <span class="n">START</span> <span class="p">(</span><span class="n">MAIN</span><span class="p">)</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>    <span class="n">SET</span> <span class="n">varStopPoint</span> <span class="n">AS</span> <span class="n">CALL</span> <span class="n">getNumber</span><span class="p">()</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>    <span class="n">CALL</span> <span class="n">outputEvenNumbers</span><span class="p">(</span><span class="n">varStopPoint</span><span class="p">)</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="n">ENDPROGRAM</span>
+</code></pre></div></td></tr></table></div>
 
 
 
