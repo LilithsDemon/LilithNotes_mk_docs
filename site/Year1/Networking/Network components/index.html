@@ -1,0 +1,1418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Network components - Lilith Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#e92063">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#network-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lilith Notes" class="md-header__button md-logo" aria-label="Lilith Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lilith Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Network components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LilithsDemon/lilithnotes.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LilithsDemon/Lilith-Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+        Notes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../blog/" class="md-tabs__link">
+        Blog
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lilith Notes" class="md-nav__button md-logo" aria-label="Lilith Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Lilith Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LilithsDemon/lilithnotes.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LilithsDemon/Lilith-Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Database design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database design" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Database%20design/Data/" class="md-nav__link">
+        Data integrity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Database%20design/Normal%20Form/" class="md-nav__link">
+        Normal Form
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          Networking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Networking" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CPU/" class="md-nav__link">
+        CPU
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Transmission/" class="md-nav__link">
+        Data Transmission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Network components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Network components
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation" class="md-nav__link">
+    Encapsulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethernet-frame" class="md-nav__link">
+    Ethernet Frame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-data" class="md-nav__link">
+    Sending data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-device-addressing" class="md-nav__link">
+    End Device Addressing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-domain" class="md-nav__link">
+    Broadcast Domain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-layer-communication" class="md-nav__link">
+    Access Layer Communication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp" class="md-nav__link">
+    ARP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dividing-the-local-network" class="md-nav__link">
+    Dividing the Local Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Dividing the Local Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-containment" class="md-nav__link">
+    Broadcast Containment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location" class="md-nav__link">
+    Location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-grouping" class="md-nav__link">
+    Logical grouping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    Routing
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routing-path-selection" class="md-nav__link">
+    Routing Path Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-forwarding" class="md-nav__link">
+    Packet forwarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-table-entries" class="md-nav__link">
+    Routing Table Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-default-gateway" class="md-nav__link">
+    The Default Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-and-remote-network-segments" class="md-nav__link">
+    Local and Remote Network Segments
+  </a>
+  
+    <nav class="md-nav" aria-label="Local and Remote Network Segments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-a-single-local-segment" class="md-nav__link">
+    Advantages of a single local segment:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disadvantages-of-a-single-local-segment" class="md-nav__link">
+    Disadvantages of a single local segment:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-having-hosts-on-a-remote-segment" class="md-nav__link">
+    Advantages of having hosts on a remote segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disadvantages-of-having-hosts-on-a-remote-segment" class="md-nav__link">
+    Disadvantages of having hosts on a remote segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-a-hierarchical-design" class="md-nav__link">
+    Benefits of a Hierarchical Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mac-address-table" class="md-nav__link">
+    The MAC Address Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-network-switch" class="md-nav__link">
+    Standard Network Switch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-lan" class="md-nav__link">
+    Virtual LAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual LAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#native-trunk-port" class="md-nav__link">
+    Native trunk port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          Software Dev
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software Dev" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Software Dev
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Dev/Pseudocode/" class="md-nav__link">
+        Pseudocode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          Web development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%20development/Languages/" class="md-nav__link">
+        Langages to learn for UNI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Blog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation" class="md-nav__link">
+    Encapsulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethernet-frame" class="md-nav__link">
+    Ethernet Frame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-data" class="md-nav__link">
+    Sending data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-device-addressing" class="md-nav__link">
+    End Device Addressing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-domain" class="md-nav__link">
+    Broadcast Domain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-layer-communication" class="md-nav__link">
+    Access Layer Communication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp" class="md-nav__link">
+    ARP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dividing-the-local-network" class="md-nav__link">
+    Dividing the Local Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Dividing the Local Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-containment" class="md-nav__link">
+    Broadcast Containment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location" class="md-nav__link">
+    Location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-grouping" class="md-nav__link">
+    Logical grouping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    Routing
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routing-path-selection" class="md-nav__link">
+    Routing Path Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-forwarding" class="md-nav__link">
+    Packet forwarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-table-entries" class="md-nav__link">
+    Routing Table Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-default-gateway" class="md-nav__link">
+    The Default Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-and-remote-network-segments" class="md-nav__link">
+    Local and Remote Network Segments
+  </a>
+  
+    <nav class="md-nav" aria-label="Local and Remote Network Segments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-a-single-local-segment" class="md-nav__link">
+    Advantages of a single local segment:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disadvantages-of-a-single-local-segment" class="md-nav__link">
+    Disadvantages of a single local segment:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-having-hosts-on-a-remote-segment" class="md-nav__link">
+    Advantages of having hosts on a remote segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disadvantages-of-having-hosts-on-a-remote-segment" class="md-nav__link">
+    Disadvantages of having hosts on a remote segment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-a-hierarchical-design" class="md-nav__link">
+    Benefits of a Hierarchical Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mac-address-table" class="md-nav__link">
+    The MAC Address Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-network-switch" class="md-nav__link">
+    Standard Network Switch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-lan" class="md-nav__link">
+    Virtual LAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual LAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#native-trunk-port" class="md-nav__link">
+    Native trunk port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/LilithsDemon/lilithnotes.github.io/edit/master/docs/Year1/Networking/Network components.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="network-components">Network components</h1>
+<h2 id="components">Components</h2>
+<p>The network infrastrucute contains three categories of hardware components:</p>
+<ul>
+<li>End Devices</li>
+<li>Network devices / Intermediate devices</li>
+<li>Network media</li>
+</ul>
+<p><img alt="cb36daa4c867eb944ab9056bebf015bf.png" src="../../../_resources/cb36daa4c867eb944ab9056bebf015bf.png" /></p>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>Each message is encapsulated into a specific format, called a frame, that includes the source and destination addresses.</p>
+<ul>
+<li>An example of encapsulation is how a letter is put inside an envelope</li>
+</ul>
+<p>For communication on an IP network, the format is very specific and includes a source and destination address.</p>
+<p><img alt="5293c3d34317f1eefd524b8edd8f36ed.png" src="../../../_resources/5293c3d34317f1eefd524b8edd8f36ed.png" /></p>
+<h2 id="ethernet-frame">Ethernet Frame</h2>
+<p>On an Ethernet network, messages are put into a frame or Layer 2 protocol data units (PDUs)</p>
+<p><img alt="7dc8e1882c5abd942b661576a7d56028.png" src="../../../_resources/7dc8e1882c5abd942b661576a7d56028.png" /></p>
+<p>Jumbo frames are Ethernet frames with more than 1500 bytes of payload, the limit set by the IEEE 802.3 standard. Commonly, jumbo frames can carry up to 9000 bytes of payload. Jumbo frames can increase the efficiency of Ethernet and network processing in hosts by reducing the protocol overhead.</p>
+<p>However an issue with Jumbo frames is that the data could get interrupted easier or corrupted which means the jumbo frame might have to be resent which takes longer.</p>
+<h2 id="sending-data">Sending data</h2>
+<p>For a device to communicate on a network a physical address and logical address are needed for a device to communicate on an Ethernet network.</p>
+<ul>
+<li>A physical address (Also named a MAC address) does not change</li>
+<li>A logical address (IP address) can changed and is commonly assigned by a network administrator.<ul>
+<li>2 parts: network and host</li>
+</ul>
+</li>
+</ul>
+<h2 id="end-device-addressing">End Device Addressing</h2>
+<p>To physically connect to a network, an end-user device must have a <strong>N</strong>etwork <strong>I</strong>nterface <strong>C</strong>ard (<strong>NIC</strong>)
+Some configuration of the OS so that the device can participate in the network.
+There are three parts to the IP configuration which must be correct for the device to send and receive information on the network.</p>
+<ol>
+<li>IP address<ul>
+<li>This identifies the host on a network</li>
+</ul>
+</li>
+<li>Subnet masks<ul>
+<li>This is used to identify the network on which the host is connected</li>
+</ul>
+</li>
+<li>Default gateway<ul>
+<li>This identifies the networking device</li>
+</ul>
+</li>
+</ol>
+<h2 id="broadcast-domain">Broadcast Domain</h2>
+<p>A broadcast message is used to contact every device on a local network.
+An Ethernet broadcast is all 1s in the destination MAC address - FFFF.FFFF.FFFF</p>
+<p><img alt="a2cdba8c20d7e5d1af0aa6f5eb712d5a.png" src="../../../_resources/a2cdba8c20d7e5d1af0aa6f5eb712d5a.png" /></p>
+<p><img alt="bb961ab6ef36b8639930fb9be042bb81.png" src="../../../_resources/bb961ab6ef36b8639930fb9be042bb81.png" /></p>
+<p>A broadcast domain is the area through which a broadcast message can travel.</p>
+<p>Each local Ethernet is a broadcast domain,</p>
+<p>Routers are used to divide the network into multiple broadcast domains.</p>
+<p><img alt="7aa4331f99d460bda197b0b803ec4da1.png" src="../../../_resources/7aa4331f99d460bda197b0b803ec4da1.png" /></p>
+<h2 id="access-layer-communication">Access Layer Communication</h2>
+<p>In order to send information from a device that is on an Ethernet network, the device must ssupply its own source MAC address, a destination MAC address, its own source IP address, as well as a destination IP address.</p>
+<p>The <strong>A</strong>dress <strong>R</strong>esolution <strong>P</strong>rotocol (<strong>ARP</strong>) is used to discover the MAC address of a device on the same local network.</p>
+<h2 id="arp">ARP</h2>
+<p>ARP uses 3 steps to discover and store the MAC address of a host on the local network when only the IPv4 address of that host is known.</p>
+<ol>
+<li>The sending host creates and sends a frame addressed to a broadcast MAC address. Contained in the frae is a message with the IPv4 address of the intended destination host</li>
+<li>Each host on the network recieves the broadcast frame and compares the IPv4 address contained in the message with its own IPv4 address. The host with the matching IPv4 address sends its own MAC address back to the original sending host.</li>
+<li>The sending host receives the message and stores the MAC address and the IPv4 address in an ARP table.</li>
+</ol>
+<p><img alt="21efd8f158f5bb2a8a9020928722d8a0.png" src="../../../_resources/21efd8f158f5bb2a8a9020928722d8a0.png" /></p>
+<h2 id="dividing-the-local-network">Dividing the Local Network</h2>
+<h3 id="broadcast-containment">Broadcast Containment</h3>
+<p>Routers in the distribution layer can limit broadcasts to the local network where they need to be heard. Although broadcasts are necessary, too many hosts connected on the same local network can generate excessive broadcast traffic and slow down the network.</p>
+<h3 id="security">Security</h3>
+<p>It also can separate and protect certain groups of computers where confidential information resides. Routers can also hide the addresses of internal computers from the outside world to help prevent attacks, and control who can get into or out of the local network.</p>
+<p><img alt="a970c950938338cb903da6707638c67b.png" src="../../../_resources/a970c950938338cb903da6707638c67b.png" /></p>
+<h3 id="location">Location</h3>
+<p>Routers in the distribution layer canbe used to interconnect local networks at various loxations of an organisation that are geographically seperated</p>
+<h3 id="logical-grouping">Logical grouping</h3>
+<p>Routers in the distribution layer can be used to logically group users, such as departments within a company, who have common needs or for access to resources.</p>
+<h2 id="routing">Routing</h2>
+<h3 id="routing-path-selection">Routing Path Selection</h3>
+<ul>
+<li>Each router interface connects to a different network.</li>
+<li>A routing table contains information for how to reach local and remote networks</li>
+<li>The destination IP address is used and compared with the networks in the routing table to determine the interface to forward the packet out of.</li>
+<li><strong>Routers do not forward broadcast messages</strong></li>
+</ul>
+<p><img alt="ae6d8447fdd904b88fc1dbd57327ce78.png" src="../../../_resources/ae6d8447fdd904b88fc1dbd57327ce78.png" />
+<img alt="5962a1238aa9d3bef887a188bb51ca9b.png" src="../../../_resources/5962a1238aa9d3bef887a188bb51ca9b.png" /></p>
+<h3 id="packet-forwarding">Packet forwarding</h3>
+<p>The destination MAC address is used to forward the packet to either the router if the destination IP address is for a different network or a specific network device on the local network.
+The ARP table shows a mapping of IP address to MAC address
+<img alt="cfa263965944ab9bf8dddc6106ab42ca.png" src="../../../_resources/cfa263965944ab9bf8dddc6106ab42ca.png" /></p>
+<h3 id="routing-table-entries">Routing Table Entries</h3>
+<p>A routing table contains network addresses and the best path to reach a network
+Two ways routes can be added to a routing table are:</p>
+<ol>
+<li>Dynamically learned from other routers</li>
+<li>Manually entered by a network Admin
+    A default route is the router interface used when forwarding packets to a destination that is not in the routing table.
+    If a packet is destined for a network that is not in the routing table and no default route exits, the packet will be dropped.</li>
+</ol>
+<p><img alt="92d3041b48d6d475b954e0552d5b762a.png" src="../../../_resources/92d3041b48d6d475b954e0552d5b762a.png" /></p>
+<p><img alt="bdc26b0b2fe380d9b8071a842f362969.png" src="../../../_resources/bdc26b0b2fe380d9b8071a842f362969.png" /></p>
+<h2 id="the-default-gateway">The Default Gateway</h2>
+<p>When a host sends a message to a device on the same network, it forwards the message directly and uses ARP to discover the MAC address.
+When a host sends a message to a device on a remote network, the hosts uses the MAC address of the router as the destination, but still has the IP address of the remote host as the Layer 3 destination.
+It is very important that each host has the correct default gateway that is the IP address of the router on the same network.
+<img alt="13e9e9ed68df5703610b051ac3f2b092.png" src="../../../_resources/13e9e9ed68df5703610b051ac3f2b092.png" />
+<img alt="5ca6d82c0a27c08fe1ac389beda9640a.png" src="../../../_resources/5ca6d82c0a27c08fe1ac389beda9640a.png" /></p>
+<h2 id="local-and-remote-network-segments">Local and Remote Network Segments</h2>
+<h3 id="advantages-of-a-single-local-segment">Advantages of a single local segment:</h3>
+<ul>
+<li>Appropriate for simpler networks</li>
+<li>Less complexity and lower network cost</li>
+<li>Allows devices to be "seen" by other devices</li>
+<li>Faster data transfer - more direct communication</li>
+<li>Ease of device access</li>
+</ul>
+<h3 id="disadvantages-of-a-single-local-segment">Disadvantages of a single local segment:</h3>
+<ul>
+<li>All hosts are in one broadcast domain which causes more traffic on the segment and may slow network performance</li>
+<li>Harder to implement QoS</li>
+<li>Harder to implement security</li>
+</ul>
+<p><img alt="7834169cd48adf7d3ada59871e4686ce.png" src="../../../_resources/7834169cd48adf7d3ada59871e4686ce.png" /></p>
+<h3 id="advantages-of-having-hosts-on-a-remote-segment">Advantages of having hosts on a remote segment</h3>
+<ul>
+<li>More appropriate for larger, more complex networks</li>
+<li>Splits up broadcast domains and decreases traffic</li>
+<li>Can improve performance on each segment</li>
+<li>Makes the machines invisible to those on other local network segments</li>
+<li>Can provide increased security</li>
+<li>Can improve network organization</li>
+</ul>
+<h3 id="disadvantages-of-having-hosts-on-a-remote-segment">Disadvantages of having hosts on a remote segment</h3>
+<ul>
+<li>Requires the use of routing (distribution layer)</li>
+<li>Router can slow traffic between segments</li>
+<li>More complexity and expense (requires a router)</li>
+</ul>
+<p><img alt="59d100a4a08435aa9a48dd6beca92a98.png" src="../../../_resources/59d100a4a08435aa9a48dd6beca92a98.png" /></p>
+<h2 id="benefits-of-a-hierarchical-design">Benefits of a Hierarchical Design</h2>
+<p>A hierarchical, layered design provides:</p>
+<ul>
+<li>Increased efficiency</li>
+<li>Optimization of function</li>
+<li>Increased speed</li>
+<li>A way in which to scale the network without impacting the performance of existing ones</li>
+</ul>
+<p>Three layers:</p>
+<ol>
+<li>Access Layer - This layer provides connections to hosts in a local Ethernet network.</li>
+<li>Distribution Layer - This layer interconnects the smaller local networks.</li>
+<li>Core Layer - This layer provides a high-speed connection between distribution layer devices.</li>
+</ol>
+<p><img alt="a589a9cb589b7d19d2e8f67be13a8358.png" src="../../../_resources/a589a9cb589b7d19d2e8f67be13a8358.png" /></p>
+<h2 id="the-mac-address-table">The MAC Address Table</h2>
+<p>A switch builds a MAC address table by examining a frame as it comes into the switch.
+A switch adds the source MAC address of the device connected to the port through which the frame came in on.
+A switch forwards a frame out to a specific port when the destination MAC address is in the MAC address table.
+A switch forwards a frame out to all hosts (except the sending host) when the destination MAC address is not in the MAC address table.</p>
+<p><img alt="057712fe7b98ad8ca6c228e7ecc794c6.png" src="../../../_resources/057712fe7b98ad8ca6c228e7ecc794c6.png" /></p>
+<h2 id="standard-network-switch">Standard Network Switch</h2>
+<p>A standard switch receive a broadcast message from any port will send the broadcast to all other ports.
+<img alt="e334e5bda16d5bb9909992ecc7e03722.png" src="../../../_resources/e334e5bda16d5bb9909992ecc7e03722.png" /><img alt="afc3503ab6c75309317675718673cde4.png" src="../../../_resources/afc3503ab6c75309317675718673cde4.png" /></p>
+<p>Devices attached to same switch can communicate with each other.
+Switch stacking can provide more ports for connection (up to 300+).</p>
+<h2 id="virtual-lan">Virtual LAN</h2>
+<p>Virtual LANS is a technology that allows you to split a network into segments using switches.
+A VLAN capable switch is possible to restrict broadcasts and to control which devices can communicate with each other.
+<img alt="4939e3b7f7f5a965abc69502d572b3e0.png" src="../../../_resources/4939e3b7f7f5a965abc69502d572b3e0.png" /></p>
+<p>A Switch which supports VLANs will also include the VLAN ID (1-1005, extend up to 4094) for each entry of the MAC Address Table.</p>
+<p><img alt="1bc798cc7cf9202d4bc2a5a81269eecf.png" src="../../../_resources/1bc798cc7cf9202d4bc2a5a81269eecf.png" />
+<img alt="8f4913b97135c8ad7448351b00635a2f.png" src="../../../_resources/8f4913b97135c8ad7448351b00635a2f.png" /></p>
+<p>Any switch port which is not explicitly assigned a VLAN number, resides in the default VLAN. Which for most vendors corresponds to VLAN 1.</p>
+<p>Traffic arriving on a switch port assigned to one VLAN will only ever be forwarded out another switch port that belongs to the same VLAN – a switch will never allow traffic to cross a VLAN boundary. Again, each VLAN operates as if it were a completely separate physical switch.</p>
+<p><img alt="35a6758d7daf6dc4a22df466b1020aa5.png" src="../../../_resources/35a6758d7daf6dc4a22df466b1020aa5.png" /></p>
+<p>Each connected switch port in the topology above is a member of only a single VLAN (an Access port). In order to extend a VLAN to the second switch, a connection is made between one Access port on both switches for each VLAN. There is a mechanism which allows a single switch port to carry traffic from multiple VLANs (a Trunk port). A tag(802.1Q) is added to the sending frames to indicate to the other end what VLAN that frame belongs to.</p>
+<p><img alt="9fa1643432cd6c71b6f16a53c1ea0b1f.png" src="../../../_resources/9fa1643432cd6c71b6f16a53c1ea0b1f.png" /><img alt="7305fb83127e01e8b8bed44a0a481d47.png" src="../../../_resources/7305fb83127e01e8b8bed44a0a481d47.png" /></p>
+<h3 id="native-trunk-port">Native trunk port</h3>
+<p>What will happen if an untagged frame somehow gets into the trunk link? </p>
+<p>Without the tag, the switch will not know what VLAN the traffic belongs to, therefore the switch associates the untagged traffic with what is configured as the Native VLAN. Essentially, the Native VLAN is the VLAN that any received untagged traffic gets assigned to on a Trunk port.</p>
+<p><img alt="9748d0510deb412f2207d2094bd8eda0.png" src="../../../_resources/9748d0510deb412f2207d2094bd8eda0.png" /></p>
+<p>Native VLAN is configured per trunk port, it is locally significant and it tells the switch - "if you receive an untagged data into this port, forward it like it is part of the native VLAN number".</p>
+<p>By default, the native VLAN of all trunk ports on switches is assigned to VLAN 1 but it can be any valid VLAN number.</p>
+<p><img alt="c15f986ac7a9d4b20f39307e91617976.png" src="../../../_resources/c15f986ac7a9d4b20f39307e91617976.png" /></p>
+<p>The switches are not only putting the received untagged data into the native VLAN, but they are also sending the data in the Native VLAN untagged.
+VLAN20 is the Native VLAN of the trunk port. All control plane messages such as CDP, VTP, and DTP are also sent through the Native VLAN i.e untagged.</p>
+<p><img alt="282100bea87c7920b39f1b7f9b9a683c.png" src="../../../_resources/282100bea87c7920b39f1b7f9b9a683c.png" /></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Data%20Transmission/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Transmission" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Data Transmission
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Software%20Dev/Pseudocode/" class="md-footer__link md-footer__link--next" aria-label="Next: Pseudocode" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Pseudocode
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Lucy Gardener
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/LilithsDemon" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/lucy__gardener" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/LilithsDemon" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -13,7 +13,7 @@
     
     
       
-        <title>Networks - Lilith Notes</title>
+        <title>Data integrity - Lilith Notes</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#data-integrity" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Networks
+              Data integrity
             
           </span>
         </div>
@@ -289,12 +294,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
       
       
       
@@ -315,9 +322,85 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data integrity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data integrity
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entity-integrity" class="md-nav__link">
+    Entity integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referential-integrity" class="md-nav__link">
+    Referential integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-integrity" class="md-nav__link">
+    Domain integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-integrity" class="md-nav__link">
+    user-defined integrity
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../Database%20design/Normal%20Form/" class="md-nav__link">
+      <a href="../Normal%20Form/" class="md-nav__link">
         Normal Form
       </a>
     </li>
@@ -336,14 +419,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
       
       
       
@@ -366,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CPU/" class="md-nav__link">
+      <a href="../../Networking/CPU/" class="md-nav__link">
         CPU
       </a>
     </li>
@@ -380,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Data%20Transmission/" class="md-nav__link">
+      <a href="../../Networking/Data%20Transmission/" class="md-nav__link">
         Data Transmission
       </a>
     </li>
@@ -392,19 +473,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Networks
+    <li class="md-nav__item">
+      <a href="../../Networking/Network%20components/" class="md-nav__link">
+        Network components
       </a>
-      
     </li>
   
 
@@ -582,6 +655,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entity-integrity" class="md-nav__link">
+    Entity integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referential-integrity" class="md-nav__link">
+    Referential integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-integrity" class="md-nav__link">
+    Domain integrity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-integrity" class="md-nav__link">
+    user-defined integrity
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -595,26 +706,63 @@
                 
                   
 
-  <a href="https://github.com/LilithsDemon/lilithnotes.github.io/edit/master/docs/Year1/Networking/Networks.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/LilithsDemon/lilithnotes.github.io/edit/master/docs/Year1/Database design/Data.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Networks</h1>
-
-
+<h1 id="data-integrity">Data integrity</h1>
+<p>Data integrity refers to the accuracy, consistency and completeness of the data.
+Safety of data in terms of compliance with the law (e.g. GDPR)
+Data integrity is important to ensure your database is efficient, preventing redundant and inaccurate data, and stopping it from being lost.
+Ensuring data integrity is vital to a business, as loss of data can cause huge fines from GDPR and reputational risks (i.e. customers won't use your bank if you cannot keep your data secure)</p>
+<h2 id="entity-integrity">Entity integrity</h2>
+<p>This ensures rows are not using repeated data, and that the primary keys ensures each row is individually accessible. (Can use data types/lengths for this)
+This ensures that each entity is also individually accessible</p>
+<h2 id="referential-integrity">Referential integrity</h2>
+<p>Ensures that the values between relationships are accurate (i.e. PK and FK match up), using methods like CASCADE</p>
+<h2 id="domain-integrity">Domain integrity</h2>
+<p>Ensures that each column of the entity is valid, and does not contain any duplicates or any unnecessary data.</p>
+<h2 id="user-defined-integrity">user-defined integrity</h2>
+<p>Ensuring that users do not implement invalid and incorrect data
+This is usually done through validation and sanitation on a website or program.</p>
+<h1 id="data-validation">Data validation</h1>
+<p>Data validation prevents invalid or incorrect data from being inputted to the database.
+This can be done through setting data types and limiting the length of the inputted value, (i.e. for a phone number, you could set it to int only and limit it to 11 digits)</p>
+<p>There's a reason most data validation is performed outside of the database - it's very hard to set up strict rules.
+However, you can at least limit the ridiculousness of some of the inputs (i.e. letters for the age, or limiting the postcode to only 7 characters)
+You can also use ENUM to restrict the accepted values to only values that you allow, which is used for fields like Acess Level.</p>
+<h1 id="data-security-and-data-control">Data security and Data control</h1>
+<p>Data contains information on the user, some of which may be sensitive and requires protection.</p>
+<p>Examples of this might include:
+- Age
+- Name
+- Email
+- Sexual orientation
+- Religious beliefs</p>
+<h2 id="data-security-techniques">Data security techniques</h2>
+<ul>
+<li>Encryption</li>
+<li>Restricting employee access</li>
+<li>Authentication</li>
+<li>Keeping the database up to date</li>
+<li>Database proxy</li>
+</ul>
+<h2 id="encryption">Encryption</h2>
+<p>When using Encryption you should use Salts and strong, relevant encyption techniques like SHA256 over MD5
+Salts are automatically generated character sets which make the passwords more secure, due to helping to hide the true password</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2022</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
       
     
   </small>
@@ -639,7 +787,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../Data%20Transmission/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Transmission" rel="prev">
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -648,20 +796,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Data Transmission
+              Home
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Software%20Dev/Pseudocode/" class="md-footer__link md-footer__link--next" aria-label="Next: Pseudocode" rel="next">
+        <a href="../Normal%20Form/" class="md-footer__link md-footer__link--next" aria-label="Next: Normal Form" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Pseudocode
+              Normal Form
             </div>
           </div>
           <div class="md-footer__button md-icon">
