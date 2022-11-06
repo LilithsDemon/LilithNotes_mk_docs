@@ -37,6 +37,8 @@ nav:
   - Notes: 
     - Home: 'index.md'
     - Year1
+  - Assignments:
+    - Assignments
 
 repo_url: https://github.com/LilithsDemon/lilithnotes.github.io
 repo_name: LilithsDemon/Lilith-Notes
