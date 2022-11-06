@@ -23,14 +23,6 @@ copyright: Copyright &copy; 2022 Lucy Gardener
 plugins:
   - search
   - include_dir_to_nav
-  - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
-  - blog
   - git-revision-date-localized:
       enable_creation_date: true
 
@@ -45,8 +37,6 @@ nav:
   - Notes: 
     - Home: 'index.md'
     - Year1
-  - Blog: 
-    -  blog/index.md
 
 repo_url: https://github.com/LilithsDemon/lilithnotes.github.io
 repo_name: LilithsDemon/Lilith-Notes
