@@ -1,5 +1,11 @@
 # Network components
 
+***
+# Needs rewriting
+
+New version due before: 08.12.22 (DD.MM.YY)
+***
+
 ## Components
 
 The network infrastrucute contains three categories of hardware components:

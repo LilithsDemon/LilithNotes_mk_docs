@@ -1,5 +1,11 @@
 # Data Transmission
 
+***
+# Still in progress
+
+Estimated completion date: 15.12.22 (DD.MM.YY)
+***
+
 ## Factors that effect data transmission
 
 ### Electrical signals
