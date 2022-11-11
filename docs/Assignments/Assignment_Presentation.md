@@ -48,12 +48,12 @@ This presentation should include:
 
 | Learning Outcome | Criteria | Related Task | Percentage |
 | --- | --- | --- | --- |
-| 1   | Annotated website designs (min 3 pages) | [1](task-1) | 20  |
+| 1   | Annotated website designs (min 3 pages) | [1](/tmp/.mount_JoplinkhyVlH/resources/app.asar/task-1 "task-1") | 20  |
 | 1   | Mood board detailing site colour scheme, fonts and style & Website hierarchy / website navigation layout | [1](#task-1) | 5   |
 | 2   | Website responsive/reactive design (Mobile devices) | [1](#task-1) | 10  |
 | 2   | Technical considerations (Dynamic vs Static websites) | [2](#task-2) | 10  |
 | 3   | Project proposal | [2](#task-2) | 20  |
-| 3   | Website functionality/interactive features | [2](tTask-2) | 15  |
+| 3   | Website functionality/interactive features | [2](/tmp/.mount_JoplinkhyVlH/resources/app.asar/tTask-2 "tTask-2") | 15  |
 | 3   | Website User Accessibility | [2](#task-2) | 20  |
 
 These are also taken into account with marking:
@@ -67,10 +67,11 @@ These are also taken into account with marking:
 ## Costs and Estimations
 
 In the [presentation](#task-2) links should be made to how much the website will cost to produce these should include:
+
 | Name of Cost | Price |
-| --- | :-: |
+| --- | --- |
 | Web Hosting (duration) | £0.00 |
 | Domain Name | £0.00 |
 | Website Development | £0.00 |
 | Ongoing maintenance (12 Months) | £0.00 |
-| Total | £0.00 |
+| ** Total ** |  ** £0.00 ** |
