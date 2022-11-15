@@ -1,6 +1,7 @@
 site_name: Lilith Notes
 theme: 
   name: material
+  logo: lilith.png
   nav_style: dark
   palette:
     scheme: slate
