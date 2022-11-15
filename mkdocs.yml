@@ -18,6 +18,9 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://github.com/LilithsDemon
 
+extra_javascript:
+  - JS/flowchart.js
+
 copyright: Copyright &copy; 2022 Lucy Gardener
 
 plugins:
